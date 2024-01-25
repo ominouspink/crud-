@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda-item Toevoegen</title>
+</head>
+<body>
+    <h1>Voeg een nieuw agenda-item toe</h1>
+    <form name="agendaFormulier" method="post" action="toevoegVerwerk.php">
+        <p>
+            <label for="onderwerpVeld">Onderwerp:</label>
+            <input type="text" id="onderwerpVeld" name="onderwerpVeld" required>
+        </p>
+        <p>
+            <label for="inhoudVeld">Inhoud:</label>
+            <textarea id="inhoudVeld" name="inhoudVeld" required></textarea>
+        </p>
+        <p>
+            <label for="begindatumVeld">Begindatum:</label>
+            <input type="date" id="begindatumVeld" name="begindatumVeld" required>
+        </p>
+        <p>
+            <label for="einddatumVeld">Einddatum:</label>
+            <input type="date" id="einddatumVeld" name="einddatumVeld" required>
+        </p>
+        <p>
+            <label for="prioriteitVeld">Prioriteit:</label>
+            <input type="number" id="prioriteitVeld" name="prioriteitVeld" min="1" max="5" required>
+        </p>
+        <p>
+            <label for="statusVeld">Status:</label>
+            <select id="statusVeld" name="statusVeld" required>
+                <option value="">--Kies een status--</option>
+                <option value="n">Niet begonnen</option>
+                <option value="b">Bezig</option>
+                <option value="a">Afgerond</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" name="verzend" value="Voeg toe aan agenda">
+        </p>
+    </form>
+</body>
+</html>
